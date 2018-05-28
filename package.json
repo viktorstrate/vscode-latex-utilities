@@ -2,8 +2,9 @@
     "name": "vscode-latex-utilities",
     "displayName": "Latex Utilities",
     "description": "Utility functions for LaTeX, ment to compliment the extension LaTeX Workshop.",
-    "version": "0.0.1",
-    "publisher": "viktorstrate",
+    "version": "1.0.0",
+    "repository": "https://github.com/viktorstrate/vscode-latex-utilities.git",
+    "publisher": "viktors",
     "engines": {
         "vscode": "^1.23.0"
     },

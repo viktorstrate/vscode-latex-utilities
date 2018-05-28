@@ -5,6 +5,8 @@ this extension is recommended to be used along with [LaTeX-Workshop](https://mar
 
 ## Features
 
+![Demo](./demo.gif)
+
 This extension is still in early development, and does not have a lot of features yet.
 
 ### Implemented features
