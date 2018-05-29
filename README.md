@@ -12,6 +12,7 @@ This extension is still in early development, and does not have a lot of feature
 ### Implemented features
 
 - Toggle bold and italic text, with command.
+- Automatically add `\item` when enter is pressed inside a `\begin{itemize}` tag
 
 ## Requirements
 
@@ -22,10 +23,17 @@ however it is recommended to use some other LaTeX extension, for compiling and p
 
 This extension contributes the following settings:
 
-* `latex-utils.makeBold`: toggle `bold` for selected text
-* `latex-utils.makeItalic`: toggle `italics` for selected text
+- `latex-utils.automaticItemTags`: Whether or not to automatically add `\item` when enter is pressed inside a `\begin{itemize}` tag
 
 ## Release Notes
+
+### 1.2.0
+
+Add `latex-utils.automaticItemTags` feature
+
+### 1.1.0
+
+Update readme on marketplace
 
 ### 1.0.0
 

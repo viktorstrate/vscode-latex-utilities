@@ -2,14 +2,15 @@
     "name": "vscode-latex-utilities",
     "displayName": "Latex Utilities",
     "description": "Utility functions for LaTeX, ment to compliment the extension LaTeX Workshop.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "repository": "https://github.com/viktorstrate/vscode-latex-utilities.git",
     "publisher": "viktors",
     "engines": {
         "vscode": "^1.23.0"
     },
     "categories": [
-        "Formatters", "Keymaps"
+        "Formatters",
+        "Keymaps"
     ],
     "activationEvents": [
         "onLanguage:latex",
@@ -28,6 +29,35 @@
                 "command": "latex-utils.makeItalic",
                 "title": "Make selection italic",
                 "category": "Latex Utilities"
+            },
+            {
+                "command": "latex-utils.makeUnderline",
+                "title": "Underline selection",
+                "category": "Latex Utilities"
+            }
+        ],
+        "keybindings":[
+            {
+                "key": "alt+cmd+b",
+                "command": "latex-utils.makeBold",
+                "when": "editorTextFocus && editorLangId == latex"
+            },
+            {
+                "key": "alt+cmd+i",
+                "command": "latex-utils.makeItalic",
+                "when": "editorTextFocus && editorLangId == latex"
+            }
+        ],
+        "configuration":[
+            {
+                "title": "Latex utilities configurations",
+                "properties": {
+                    "latex-utils.automaticItemTags": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Automatically add '\\item' when enter is pressed inside a '\\begin{itemize}' tag"
+                    }
+                }
             }
         ]
     },

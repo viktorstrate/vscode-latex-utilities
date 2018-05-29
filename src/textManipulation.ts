@@ -1,8 +1,14 @@
+/**
+ * This file handles more complex text manipulations
+ */
+
 import * as vscode from "vscode";
 
 // Manipulation of text
 
 export function toggleSelectedKeyword(keyword: string): void {
+
+  console.log("Toggle selected keyword called");
 
   let editor = vscode.window.activeTextEditor;
 
@@ -21,7 +27,6 @@ export function toggleSelectedKeyword(keyword: string): void {
   let match;
 
   while (match = pattern.exec(line.text)) {
-    console.log("Found match", match[1]);
 
     let matchPosition = line.range.start.translate(0, match.index);
 
@@ -29,7 +34,6 @@ export function toggleSelectedKeyword(keyword: string): void {
     let insideText = match[1];
 
     if (matchRange.contains(selection)) {
-      console.log('Tag found!');
       // Remove keyword
       editor.edit(((editBuilder) => {
         editBuilder.replace(matchRange, insideText);
