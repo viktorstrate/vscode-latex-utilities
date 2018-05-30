@@ -23,7 +23,7 @@ export function handleTextChangeEvent (event: vscode.TextDocumentChangeEvent) {
     return;
   }
 
-  let pattern = /\\begin{itemize}((?:.|\n)*)\\end{itemize}/g;
+  let pattern = /\\begin{itemize}((?:.|\n)*?)\\end{itemize}/g;
 
   let match;
   while (match = pattern.exec(event.document.getText())) {

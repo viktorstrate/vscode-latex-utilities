@@ -44,7 +44,6 @@ export default class EventHandler {
   }
 
   handleTextChange(event: vscode.TextDocumentChangeEvent) {
-    // TODO: HER
     if (vscode.workspace.getConfiguration('latex-utils').get('automaticItemTags')) {
       itemlists.handleTextChangeEvent(event);
     }

@@ -2,7 +2,7 @@
     "name": "vscode-latex-utilities",
     "displayName": "Latex Utilities",
     "description": "Utility functions for LaTeX, ment to compliment the extension LaTeX Workshop.",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "repository": "https://github.com/viktorstrate/vscode-latex-utilities.git",
     "publisher": "viktors",
     "engines": {
@@ -36,7 +36,7 @@
                 "category": "Latex Utilities"
             }
         ],
-        "keybindings":[
+        "keybindings": [
             {
                 "key": "alt+cmd+b",
                 "command": "latex-utils.makeBold",
@@ -48,7 +48,7 @@
                 "when": "editorTextFocus && editorLangId == latex"
             }
         ],
-        "configuration":[
+        "configuration": [
             {
                 "title": "Latex utilities configurations",
                 "properties": {

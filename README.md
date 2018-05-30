@@ -27,16 +27,4 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 1.2.0
-
-Add `latex-utils.automaticItemTags` feature
-
-### 1.1.0
-
-Update readme on marketplace
-
-### 1.0.0
-
-Initial release of vscode-latex-utilities.
-
-Add bold and italic toggle commands
+See [Changelog](./CHANGELOG.md)
