@@ -38,12 +38,14 @@
         ],
         "keybindings": [
             {
-                "key": "alt+cmd+b",
+                "key": "ctrl+l ctrl+b",
+                "mac": "cmd+l cmd+b",
                 "command": "latex-utils.makeBold",
                 "when": "editorTextFocus && editorLangId == latex"
             },
             {
-                "key": "alt+cmd+i",
+                "key": "ctrl+l ctrl+i",
+                "mac": "cmd+l cmd+i",
                 "command": "latex-utils.makeItalic",
                 "when": "editorTextFocus && editorLangId == latex"
             }
