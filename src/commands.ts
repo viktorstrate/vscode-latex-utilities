@@ -30,5 +30,19 @@ export default function commandsToRegister(): vscode.Disposable[] {
     commands.push(newCommand);
   }
 
+  let wrapCommand = vscode.commands.registerCommand('latex-utils.wrapCommand', () => {
+    vscode.window.showInputBox({
+      placeHolder: "command",
+      prompt: "Please enter the command to wrap"
+    })
+      .then(command => {
+        if (command) {
+          toggleSelectedKeyword(command);
+        }
+      });
+  });
+
+  commands.push(wrapCommand);
+
   return commands;
 }

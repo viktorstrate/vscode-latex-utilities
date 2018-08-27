@@ -4,9 +4,7 @@
 
 import * as vscode from "vscode";
 
-// Manipulation of text
-
-export function toggleSelectedKeyword(keyword: string): void {
+export function toggleSelectedKeyword(keyword: string): undefined | 'added' | 'removed' {
 
   console.log("Toggle selected keyword called");
 
@@ -38,7 +36,7 @@ export function toggleSelectedKeyword(keyword: string): void {
       editor.edit(((editBuilder) => {
         editBuilder.replace(matchRange, insideText);
       }));
-      return;
+      return 'removed';
     }
   }
 
@@ -46,4 +44,6 @@ export function toggleSelectedKeyword(keyword: string): void {
   editor.edit(((editBuilder) => {
     editBuilder.replace(selection, `\\${keyword}{${text}}`);
   }));
+
+  return 'added';
 }

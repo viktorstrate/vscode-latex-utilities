@@ -15,7 +15,9 @@
     "activationEvents": [
         "onLanguage:latex",
         "onCommand:latex-utils.wrapBold",
-        "onCommand:latex-utils.wrapItalic"
+        "onCommand:latex-utils.wrapItalic",
+        "onCommand:latex-utils.wrapUnderline",
+        "onCommand:latex-utils.wrapCommand"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -52,6 +54,18 @@
                 "key": "ctrl+l ctrl+i",
                 "mac": "cmd+l cmd+i",
                 "command": "latex-utils.wrapItalic",
+                "when": "editorTextFocus && editorLangId == latex"
+            },
+            {
+                "key": "ctrl+l ctrl+u",
+                "mac": "cmd+l cmd+u",
+                "command": "latex-utils.wrapUnderline",
+                "when": "editorTextFocus && editorLangId == latex"
+            },
+            {
+                "key": "ctrl+l ctrl+c",
+                "mac": "cmd+l cmd+c",
+                "command": "latex-utils.wrapCommand",
                 "when": "editorTextFocus && editorLangId == latex"
             }
         ],
