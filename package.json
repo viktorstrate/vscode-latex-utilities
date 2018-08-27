@@ -14,25 +14,30 @@
     ],
     "activationEvents": [
         "onLanguage:latex",
-        "onCommand:latex-utils.makeBold",
-        "onCommand:latex-utils.makeItalic"
+        "onCommand:latex-utils.wrapBold",
+        "onCommand:latex-utils.wrapItalic"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "latex-utils.makeBold",
-                "title": "Make selection bold",
+                "command": "latex-utils.wrapBold",
+                "title": "Wrap selection in bold",
                 "category": "Latex Utilities"
             },
             {
-                "command": "latex-utils.makeItalic",
-                "title": "Make selection italic",
+                "command": "latex-utils.wrapItalic",
+                "title": "Wrap selection in italic",
                 "category": "Latex Utilities"
             },
             {
-                "command": "latex-utils.makeUnderline",
-                "title": "Underline selection",
+                "command": "latex-utils.wrapUnderline",
+                "title": "Wrap selection with underline",
+                "category": "Latex Utilities"
+            },
+            {
+                "command": "latex-utils.wrapCommand",
+                "title": "Wrap selection in custom command",
                 "category": "Latex Utilities"
             }
         ],
@@ -40,13 +45,13 @@
             {
                 "key": "ctrl+l ctrl+b",
                 "mac": "cmd+l cmd+b",
-                "command": "latex-utils.makeBold",
+                "command": "latex-utils.wrapBold",
                 "when": "editorTextFocus && editorLangId == latex"
             },
             {
                 "key": "ctrl+l ctrl+i",
                 "mac": "cmd+l cmd+i",
-                "command": "latex-utils.makeItalic",
+                "command": "latex-utils.wrapItalic",
                 "when": "editorTextFocus && editorLangId == latex"
             }
         ],

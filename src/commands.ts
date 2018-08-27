@@ -3,31 +3,32 @@ import { toggleSelectedKeyword } from './textManipulation';
 
 export default function commandsToRegister(): vscode.Disposable[] {
 
-  let commands: vscode.Disposable[] = [];
-
   // The commands have been defined in the package.json file
   // Now provide the implementation of the command with  registerCommand
   // The commandId parameter must match the command field in package.json
-  let makeBold = vscode.commands.registerCommand('latex-utils.makeBold', () => {
+  let commands: vscode.Disposable[] = [];
 
-    toggleSelectedKeyword('textbf');
+  const wrapperCommands = [
+    [
+      'textbf',
+      'wrapBold'
+    ], [
+      'textit',
+      'wrapItalic'
+    ], [
+      'underline',
+      'wrapUnderline'
+    ]
+  ];
 
-  });
-  commands.push(makeBold);
+  for (let cmd of wrapperCommands) {
 
-  let makeItalic = vscode.commands.registerCommand('latex-utils.makeItalic', () => {
+    let newCommand = vscode.commands.registerCommand(`latex-utils.${cmd[1]}`, () => {
+      toggleSelectedKeyword(cmd[0]);
+    });
 
-    toggleSelectedKeyword('textit');
-
-  });
-  commands.push(makeItalic);
-
-  let makeUnderline = vscode.commands.registerCommand('latex-utils.makeUnderline', () => {
-
-    toggleSelectedKeyword('underline');
-
-  });
-  commands.push(makeUnderline);
+    commands.push(newCommand);
+  }
 
   return commands;
 }
