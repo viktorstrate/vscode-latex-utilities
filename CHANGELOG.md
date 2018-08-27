@@ -4,6 +4,13 @@ All notable changes to the "vscode-latex-utilities" extension will be documented
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.4.1] - 2018-08-27
+
+- Add command to wrap using custom keyword
+- Add command to wrap as emphasize
+- Running wrapping command on empty selection, now triggers a snippet
+- Renamed internal components
+
 ## [1.4.0] - 2018-07-04
 
 - Change shortcuts to be prefixed with `cmd+l`

@@ -38,6 +38,11 @@
                 "category": "Latex Utilities"
             },
             {
+                "command": "latex-utils.wrapEmphasize",
+                "title": "Wrap selection as emphasize",
+                "category": "Latex Utilities"
+            },
+            {
                 "command": "latex-utils.wrapCommand",
                 "title": "Wrap selection in custom command",
                 "category": "Latex Utilities"
@@ -60,6 +65,12 @@
                 "key": "ctrl+l ctrl+u",
                 "mac": "cmd+l cmd+u",
                 "command": "latex-utils.wrapUnderline",
+                "when": "editorTextFocus && editorLangId == latex"
+            },
+            {
+                "key": "ctrl+l ctrl+e",
+                "mac": "cmd+l cmd+e",
+                "command": "latex-utils.wrapEmphasize",
                 "when": "editorTextFocus && editorLangId == latex"
             },
             {

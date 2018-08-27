@@ -18,6 +18,9 @@ export default function commandsToRegister(): vscode.Disposable[] {
     ], [
       'underline',
       'wrapUnderline'
+    ], [
+      'emph',
+      'wrapEmphasize'
     ]
   ];
 
