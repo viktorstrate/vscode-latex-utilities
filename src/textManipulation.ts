@@ -14,7 +14,6 @@ export function toggleSelectedKeyword(keyword: string): undefined | 'added' | 'r
     return;
   }
 
-
   let { selection, document } = editor;
   let text = document.getText(selection);
 
@@ -41,9 +40,19 @@ export function toggleSelectedKeyword(keyword: string): undefined | 'added' | 'r
   }
 
   // Add keyword
-  editor.edit(((editBuilder) => {
-    editBuilder.replace(selection, `\\${keyword}{${text}}`);
-  }));
+  if (text.length > 0) {
+
+    editor.edit(((editBuilder) => {
+      editBuilder.replace(selection, `\\${keyword}{${text}}`);
+    }));
+
+  } else {
+
+    const snippet = new vscode.SnippetString(`\\${keyword}{$1}`);
+
+    editor.insertSnippet(snippet, selection.start);
+
+  }
 
   return 'added';
 }
