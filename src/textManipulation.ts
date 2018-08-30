@@ -4,7 +4,7 @@
 
 import * as vscode from "vscode";
 
-export function toggleSelectedKeyword(keyword: string): undefined | 'added' | 'removed' {
+export function toggleSelectedKeyword(keyword: string, outerBraces?: boolean): undefined | 'added' | 'removed' {
 
   console.log("Toggle selected keyword called");
 
@@ -43,12 +43,22 @@ export function toggleSelectedKeyword(keyword: string): undefined | 'added' | 'r
   if (text.length > 0) {
 
     editor.edit(((editBuilder) => {
-      editBuilder.replace(selection, `\\${keyword}{${text}}`);
+      if (outerBraces === true) {
+        editBuilder.replace(selection, `{\\${keyword} ${text}}`);
+      } else {
+        editBuilder.replace(selection, `\\${keyword}{${text}}`);
+      }
     }));
 
   } else {
 
-    const snippet = new vscode.SnippetString(`\\${keyword}{$1}`);
+    let snippet: vscode.SnippetString;
+
+    if (outerBraces === true) {
+      snippet = new vscode.SnippetString(`{ \\${keyword} $1}`);
+    } else {
+      snippet = new vscode.SnippetString(`\\${keyword}{$1}`);
+    }
 
     editor.insertSnippet(snippet, selection.start);
 

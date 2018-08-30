@@ -46,6 +46,11 @@
                 "command": "latex-utils.wrapCommand",
                 "title": "Wrap selection in custom command",
                 "category": "Latex Utilities"
+            },
+            {
+                "command": "latex-utils.wrapCommandOuterBraces",
+                "title": "Wrap selection in custom command, with outer braces containing",
+                "category": "Latex Utilities"
             }
         ],
         "keybindings": [
