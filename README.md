@@ -1,3 +1,8 @@
+# This extension has been archived, and has been removed from the marketplace!
+All of the features of this plugin, has been merged into the [LaTeX-Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension. 🎉 See [James-Yu/LaTeX-Workshop#848](https://github.com/James-Yu/LaTeX-Workshop/pull/848) for details.
+
+This repository has been archived, because the project is not needed any longer.
+
 # Latex Utilities Extension for Visual Studio Code
 
 This is an extension with utility functions for LaTeX,
